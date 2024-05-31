@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- certmanagerapp_v1_certnotification.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

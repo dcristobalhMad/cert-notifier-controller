@@ -1,0 +1,27 @@
+# permissions for end users to edit certnotifications.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: cert-notifier-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: certnotification-editor-role
+rules:
+- apiGroups:
+  - certmanagerapp.cert-notifier.com
+  resources:
+  - certnotifications
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - certmanagerapp.cert-notifier.com
+  resources:
+  - certnotifications/status
+  verbs:
+  - get
