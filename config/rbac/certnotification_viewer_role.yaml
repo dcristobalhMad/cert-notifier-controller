@@ -1,0 +1,23 @@
+# permissions for end users to view certnotifications.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: cert-notifier-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: certnotification-viewer-role
+rules:
+- apiGroups:
+  - certmanagerapp.cert-notifier.com
+  resources:
+  - certnotifications
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - certmanagerapp.cert-notifier.com
+  resources:
+  - certnotifications/status
+  verbs:
+  - get

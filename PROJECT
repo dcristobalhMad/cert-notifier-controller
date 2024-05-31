@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: cert-notifier-controller
 repo: github.com/dcristobalhMad/cert-notifier-controller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: cert-notifier.com
+  group: certmanagerapp
+  kind: CertNotification
+  path: github.com/dcristobalhMad/cert-notifier-controller/api/v1
+  version: v1
 version: "3"

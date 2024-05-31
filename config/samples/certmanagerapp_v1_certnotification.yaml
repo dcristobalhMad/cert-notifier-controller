@@ -1,0 +1,27 @@
+apiVersion: certmanagerapp.cert-notifier.com/v1
+kind: CertNotification
+metadata:
+  labels:
+    app.kubernetes.io/name: cert-notifier-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: certnotification-sample
+spec:
+  emailConfig:
+    from: "your-email@example.com"
+    password:
+      name: notification-secrets
+      key: email-password
+    to: "recipient@example.com"
+    smtpHost: "smtp.example.com"
+    smtpPort: "587"
+  slackConfig:
+    token:
+      name: notification-secrets
+      key: slack-token
+    channelID: "your-channel-id"
+  telegramConfig:
+    botToken:
+      name: notification-secrets
+      key: telegram-bot-token
+    chatID: 123456789
+  expiryNotificationDays: 30
