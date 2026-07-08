@@ -1,15 +1,13 @@
 module github.com/dcristobalhMad/cert-notifier-controller
 
-go 1.23.0
-
-toolchain go1.23.7
+go 1.25
 
 require (
 	github.com/cert-manager/cert-manager v1.15.4
 	github.com/go-telegram-bot-api/telegram-bot-api v4.6.4+incompatible
 	github.com/onsi/ginkgo/v2 v2.17.2
 	github.com/onsi/gomega v1.33.1
-	github.com/slack-go/slack v0.13.0
+	github.com/slack-go/slack v0.23.1
 	k8s.io/api v0.30.1
 	k8s.io/apimachinery v0.30.1
 	k8s.io/client-go v0.30.1
@@ -37,7 +35,7 @@ require (
 	github.com/google/gofuzz v1.2.0 // indirect
 	github.com/google/pprof v0.0.0-20240424215950-a892ee059fd6 // indirect
 	github.com/google/uuid v1.6.0 // indirect
-	github.com/gorilla/websocket v1.5.1 // indirect
+	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/imdario/mergo v0.3.16 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
